@@ -12,13 +12,23 @@ import processing.core.*;
 public class Main extends PApplet {
      @Override
     public void setup() {
+        // Variables windowWidth and windowHeight convert the string inputs from
+        // the args array and converts them in to an integer to create the size
+        // of the graph.
         int windowWidth = Integer.parseInt(args[1]);
         int windowHeight = Integer.parseInt(args[2]);
+        // windowWidth and windowHeight are used as the parameters for the size
+        // function
         size (windowWidth,windowHeight);
+        
+        // The dataValues[] is used to store the indexes of the arg[] minus the
+        // first 3 indexes which elements contain the project name, windowWidth
+        // & windowHeight
         float dataValues[] = new float[args.length-3];
+        // variable to store the largest data value
         float maxValue = 0;
         float normalizeValue [] = new float [dataValues.length];
-
+       // This for loop converts the index elements in to floats
         for(int i =0;i<dataValues.length;i++){
             dataValues[i] = Float.parseFloat(args[3+i]);
         }
@@ -26,6 +36,8 @@ public class Main extends PApplet {
             if (maxValue <= dataValues[i])
                   maxValue = dataValues[i];
         }
+        // This for loop is used to normalize each element index in the
+        // dataValue array
 
         for (int i= 0; i< dataValues.length;i++){
             normalizeValue [i] = dataValues [i]/maxValue;
@@ -35,6 +47,8 @@ public class Main extends PApplet {
         float maxHeight = windowHeight - 20;
         float barWidth = (windowWidth/normalizeValue.length-
               (normalizeValue.length+1));
+       // This for loop creates the rectangles and creates random colors for
+        // each one
         for (int i = 0; i <normalizeValue.length;i++){
             float barHeight= (maxHeight * normalizeValue[i]);
             float y = maxHeight- barHeight + 20;

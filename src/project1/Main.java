@@ -32,6 +32,8 @@ public class Main extends PApplet {
         for(int i =0;i<dataValues.length;i++){
             dataValues[i] = Float.parseFloat(args[3+i]);
         }
+        //This for loop compares the elements in the dataValue array to max
+        //value variable and stores the highest value in maxValue
         for(int i = 0; i <dataValues.length;i++){
             if (maxValue <= dataValues[i])
                   maxValue = dataValues[i];

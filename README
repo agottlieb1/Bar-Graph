@@ -6,5 +6,9 @@ BarGraphProject1
 
 Description: This program draws a bar graph based on the input from the user.
 
-This program can be ran using netbeans in the setup project configuration tab. Enter yours values in argument box the first two values are the width and height used determine the size of the graph. You can then enter any amount of float or integer values. Run the program and bar graphs will appear on the screen representing the data values you entered.
+This program can be ran using netbeans in the setup project configuration tab. Enter yours values in argument box the first two values are the width and height used to determine the size of the graph. You can then enter any amount of float or integer values. Run the program and bar graphs will appear on the screen representing the data values you entered.
 
+Example:
+Argument  600 300 50 200 50 56 100 50
+
+Gives you a 600 X 400  graph  with 6 bars representing the values.
